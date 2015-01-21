@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <title>Top Pot Simulator</title>
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <header>
+      <section class='storeLogo'>
+        <img src="img/TopLogo.jpg">
+      </section>
+      <section class='titleBox'>
+        <h1>Volume Calculator</h1>
+      </section>
+    </header>
+    <section class='interface'>
+      <h1 class='red'>Daily Donut Needs</h1>
+        <form id='storeData'>
+          <select id='choose'>
+            <option value=''>Select Location</option>
+            <option value='DownTown'>DownTown</option>
+            <option value='Capitol Hill'>Capitol Hill</option>
+            <option value='S. Lake Union'>South Lake Union</option>
+            <option value='Wedgewood'>Wedgewood</option>
+            <option value='Ballard'>Ballard</option>
+          </select> 
+          <input  label='hours' id='hours' type = "text" placeholder = "hours open" required>
+          <input  label='low' id='low' type = "text" placeholder = "low end foot traffic" required>
+          <input  label='high' id='high' type = "text" placeholder = "high end foot traffic" required>
+          <input  label='perc' id='perc' type = "text" placeholder = "percentage who enter store" required>
+          <input  label='donuts' id='donuts' type = "text" placeholder = "Donuts per person" required>
+          <button type='button' id='add'>Add</button><br>
+        </form>
+      <section class='output'>
+        <h2 class='red'>Store Report</h2>
+        <table id='results'>
+          <colgroup span='12'></colgroup>
+          <tr class='tableHeads'>
+            <th>Location</th>
+            <th>Hour 1 </td>
+            <th>Hour 2 </th>
+            <th>Hour 3 </th>
+            <th>Hour 4 </th>
+            <th>Hour 5 </th>
+            <th>Hour 6 </th>
+            <th>Hour 7 </th>
+            <th>Hour 8 </th>
+            <th>Hour 9 </th>
+            <th>Hour 10 </th>
+            <th>Hour 11 </th>
+            <th>Total</th>
+          </tr>
+        </table>
+      </section>  
+    </section> 
+    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/{{JQUERY_VERSION}}/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-{{JQUERY_VERSION}}.min.js"><\/script>')</script>
+    <script src="js/javascript.js" type="text/javascript" charset="utf-8"></script>
+
+  </body>
+</html>
