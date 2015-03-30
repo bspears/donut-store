@@ -1,0 +1,65 @@
+body {
+  font-family: helvetica;
+  color: #fff;
+  width: 800px;
+  margin: 50px auto;
+  background-color: #a8c7cf;
+}
+
+.red {
+  color: #7a000a;
+}
+
+.storeLogo {
+  float: left;
+  background-color: #fff;
+  width: 25%;
+  border-radius: 20px 0 0 0;
+}
+
+.storeLogo img {
+  max-width: 50%;
+  padding: 10.1% 25%;
+}
+
+.interface {
+  background-color: black;
+  margin: 0 auto;
+  padding: 50px 0;
+  text-align: center;
+  clear: both;
+  border-radius: 0 0 20px 0;
+}
+
+.titleBox {
+  padding: 4.8% 0;
+  width: 75%;
+  margin-left: 25%;
+  text-align: center;
+  background-image: url(../img/home.jpg);
+}
+
+input {
+  border: none;
+  padding: 2px;
+}
+
+button {
+  font-family: helvetica;
+  margin: 50px;
+  color: #fff;
+  background-color: #7a000a;
+  border: none;
+  width: 100px;
+  height: 25px;
+}
+
+table {
+  margin: 0 auto;
+  font-size: .8em;
+}
+
+.tableHeads {
+  background-color: #555;
+}
+

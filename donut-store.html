@@ -1,54 +1,49 @@
 <script>
 	// determine how many donuts each store needs per day, based on their hourly sales.
-
   //define a store prototype
-  function Store(location, hours, low, high, grabs, donutsPerUser){
-    this.location = location;
-    this.hours = hours;
-    this.low = low;
-    this.high = high;
-    this.grabs = grabs;
-    this.donutsPerUser = donutsPerUser;
-    this.perHour = 0;
-    this.range = function(low, high){
-      var input = this.high - this.low + 1;
-      var randomizer = Math.floor(Math.random()*input);
+  function Store(location, hours, low, high, customers, donutsPerUser) {
+    this.location           = location;
+    this.hours              = hours;
+    this.low                = low;
+    this.high               = high;
+    this.customers          = customers;
+    this.donutsPerUser      = donutsPerUser;
+    this.perHour            = 0;
+    this.sold               = 0;
+
+    this.ranNumberOfPeople = function(low, high){
+      var range = this.high + 1 - this.low;
+      var randomizer = this.low + Math.floor(Math.random()*range);
       this.perHour = randomizer;
       return this.perHour;
     };
-    this.sold = 0;
-    this.sell = function(grabs, perHour, donutsPerUser){
-      var sales = (this.grabs/100 * this.perHour) * this.donutsPerUser;
+    this.sell = function(customers, perHour, donutsPerUser){
+      var sales = (this.customers/100 * this.perHour) * this.donutsPerUser;
       this.sold = sales;
       return this.sold;
-      
     };  
-    
   }
-  //create an object for each store
-  var downtown = new Store('Downtown', 11, 80, 220, 10, 4);
-  var capHill = new Store('Capitol Hill', 11, 5, 45, 45, 2);
-  var sLakeU = new Store('South Lake Union', 11, 180, 250, 5, 6);
-  var wedgwood = new Store('Wedgewood', 11, 20, 60, 20, 1.5);
-  var ballard = new Store('Ballard', 11, 25, 175, 22, 1);
+  //an object for each store
+  var downtown = new Store('Downtown',        11, 80,  220, 10, 4  );
+  var capHill = new Store('Capitol Hill',     11, 5,   45,  45, 2  );
+  var sLakeU = new Store('South Lake Union',  11, 180, 250, 5,  6  );
+  var wedgwood = new Store('Wedgewood',       11, 20,  60,  20, 1.5);
+  var ballard = new Store('Ballard',          11, 25,  175, 22, 1  );
   // array containing all stores
   var stores = [downtown, capHill, sLakeU, wedgwood, ballard];
-  //make a function to calculate how many donuts a store will sell each hour
-
-  var report = function(store){
+  //a function to calculate how many donuts a store will sell each hour
+  var storeReport = function(store){
     var total = 0;
     for(i=store.hours;i>0;i--){
-    store.range();
-    total = store.sell();
-    console.log(Math.round(total));
+    store.ranNumberofPeople();
+    total += Math.round(store.sell());
+    console.log(Math.round(store.sell()));
     };
-    
-  }
-
-  var bigReport = function(array){
-    for(i in array)
-    console.log(array[i].location + " Donuts per hour.") + report(array[i]);
+    console.log('Total ' + Math.round(total))
   };
-
-
+  // function to return the results of all locations
+  var allStoreReport = function(array){
+    for(i in array)
+    console.log(array[i].location + " Donuts per hour.") + storeReport(array[i]);
+  };
 </script>

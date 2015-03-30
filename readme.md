@@ -18,61 +18,71 @@ This is what the final output looks like in the console:
 bigReport(stores)
 
 
-donut-store.html:50 Downtown Donuts per hour.
-donut-store.html:43 6
-donut-store.html:43 13
-donut-store.html:43 46
-donut-store.html:43 6
-donut-store.html:43 50
-donut-store.html:43 42
-donut-store.html:43 2
-donut-store.html:43 24
-donut-store.html:43 18
-donut-store.html:43 50
-donut-store.html:43 19
-donut-store.html:50 Capitol Hill Donuts per hour.
-donut-store.html:43 12
-donut-store.html:43 29
-donut-store.html:43 32
-donut-store.html:43 15
-donut-store.html:43 31
-donut-store.html:43 6
-donut-store.html:43 36
-donut-store.html:43 31
-donut-store.html:43 9
-donut-store.html:43 10
-donut-store.html:43 3
-donut-store.html:50 South Lake Union Donuts per hour.
-donut-store.html:43 9
-donut-store.html:43 21
-donut-store.html:43 9
-donut-store.html:43 7
-donut-store.html:43 21
-donut-store.html:43 9
-donut-store.html:43 0
-donut-store.html:43 2
-donut-store.html:43 8
-donut-store.html:43 3
-donut-store.html:43 0
-donut-store.html:50 Wedgewood Donuts per hour.
-donut-store.html:43 11
-donut-store.html:43 2
-donut-store.html:43 9
-donut-store.html:43 5
-donut-store.html:43 6
-2donut-store.html:43 11
-donut-store.html:43 12
-2donut-store.html:43 4
-donut-store.html:43 6
-donut-store.html:50 Ballard Donuts per hour.
-donut-store.html:43 31
-donut-store.html:43 22
-donut-store.html:43 30
-donut-store.html:43 18
-donut-store.html:43 2
-donut-store.html:43 8
-donut-store.html:43 26
-donut-store.html:43 30
-donut-store.html:43 26
-donut-store.html:43 18
-donut-store.html:43 4
+bigReport(stores)
+
+
+ Downtown Donuts per hour.
+ 6
+ 34
+ 54
+ 31
+ 32
+ 48
+ 24
+ 39
+ 46
+ 1
+ 46
+ Total 361
+ Capitol Hill Donuts per hour.
+ 23
+ 32
+ 8
+ 23
+ 14
+ 4
+ 14
+ 33
+ 17
+ 23
+ 26
+ Total 217
+ South Lake Union Donuts per hour.
+ 2
+ 14
+ 18
+ 15
+ 14
+ 9
+ 12
+ 20
+ 7
+ 21
+ 19
+ Total 151
+ Wedgewood Donuts per hour.
+ 5
+ 1
+ 11
+ 5
+ 2
+ 0
+ 2
+ 5
+ 4
+ 11
+ 7
+ Total 53
+ Ballard Donuts per hour.
+ 29
+ 20
+ 8
+ 15
+ 22
+ 16
+ 17
+ 21
+ 16
+ 20
+ 25
+ Total 209
