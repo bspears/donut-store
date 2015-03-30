@@ -3,7 +3,7 @@
     var stores        = [];
     var currentStore  = stores[stores.length-1];
     $('.output').hide();
-    document.getElementById('add').addEventListener('click', addStore, false);
+    $('#add').on('click', addStore, false);
 
     function Store(location, hours, low, high, perc, donuts) {
       this.location           = location;
@@ -15,14 +15,14 @@
       this.total              = 0;
       this.donutsPerhour      = [];
       this.range              = this.high - this.low;
-    };
+    };  
 
     var donutsSold = function(store){
       for (i=0; i < store.hours; i++) {
         var ranNumber = (Math.floor(Math.random() * store.range)) + store.low;
         var donutsNeeded = Math.ceil(ranNumber * (store.perc/100)) * store.donuts;
         store.total += donutsNeeded;
-        store.donutsPerhour.push (donutsNeeded)
+        store.donutsPerhour.push (donutsNeeded);
       };    
     };
 
